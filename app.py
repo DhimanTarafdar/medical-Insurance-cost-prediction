@@ -10,7 +10,7 @@ with open("insurance_gb_pipeline.pkl", "rb") as f:
     model = pickle.load(f)
 
 # 2. The Logic Function
-def predict_gpa(age, sex, bmi, children, smoker, region):
+def predict_cost(age, sex, bmi, children, smoker, region):
     
     # Pack inputs into a DataFrame
     # The column names must match your CSV file exactly
@@ -41,7 +41,7 @@ inputs = [
 ]
 
 app = gr.Interface(
-    fn=predict_gpa,
+    fn=predict_cost,
       inputs=inputs,
         outputs="text", 
         title="Insurance Cost Predictor")
