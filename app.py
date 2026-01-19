@@ -44,6 +44,6 @@ app = gr.Interface(
     fn=predict_cost,
       inputs=inputs,
         outputs="text", 
-        title="Insurance Cost Predictor")
+        title="Medical Insurance Cost Predictor")
 
 app.launch(share=True)
